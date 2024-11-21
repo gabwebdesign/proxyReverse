@@ -8,7 +8,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHttpClient<IProxyService, ProxyService>("ChuckNorrisAPI", client => client.BaseAddress = new Uri("https://chucknorris.io"));
+builder.Services.AddHttpClient<IProxyService, ProxyService>("ChuckNorrisAPI", client => 
+    client.BaseAddress = new Uri("https://api.hacienda.go.cr/"));
 builder.Services.AddScoped<IProxyService, ProxyService>();
 var app = builder.Build();
 

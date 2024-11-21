@@ -2,14 +2,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace proyectoCursoDotNet.Controllers
 {
-    public class ProxyController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProxyController: ControllerBase
     {
-        
         private readonly IProxyService _proxyService;
 
-        public ProxyController(IProxyService service)
+        public ProxyController(IProxyService proxyService)
         {
-            _proxyService = service;
+            _proxyService = proxyService;
         }
 
         // GET: proxyController

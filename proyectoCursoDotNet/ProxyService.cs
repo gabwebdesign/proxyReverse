@@ -6,12 +6,12 @@ public class ProxyService : IProxyService
 
     public ProxyService(IHttpClientFactory clientFactory)
     {
-        _client = clientFactory.CreateClient("ChuckNorrisAPI");
+        _client = clientFactory.CreateClient("ChuckNorrisApi");
     }
 
     public async Task<string> GetAuthorAsync()
     {
-        var responseString = await _client.GetStringAsync("jokes/random");
+        var responseString = await _client.GetStringAsync("indicadores/tc/dolar");
         Console.WriteLine(responseString);
         return responseString;
     }

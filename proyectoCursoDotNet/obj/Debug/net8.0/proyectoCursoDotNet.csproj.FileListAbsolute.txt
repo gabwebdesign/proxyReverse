@@ -225,3 +225,4 @@
 /Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/Debug/net8.0/proyectoCursoDotNet.pdb
 /Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/Debug/net8.0/proyectoCursoDotNet.genruntimeconfig.cache
 /Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/Debug/net8.0/ref/proyectoCursoDotNet.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/Debug/net8.0/proyectoCursoDotNet.sourcelink.json
