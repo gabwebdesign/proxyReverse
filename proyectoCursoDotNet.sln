@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoCursoDotNet", "proyectoCursoDotNet\proyectoCursoDotNet.csproj", "{EAE5F804-24CF-440F-A0BC-9C99CA22721D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIconDB", "APIconDB\APIconDB.csproj", "{B00FD0CA-8BE1-405B-80B6-2489D406F73C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{EAE5F804-24CF-440F-A0BC-9C99CA22721D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE5F804-24CF-440F-A0BC-9C99CA22721D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE5F804-24CF-440F-A0BC-9C99CA22721D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00FD0CA-8BE1-405B-80B6-2489D406F73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00FD0CA-8BE1-405B-80B6-2489D406F73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00FD0CA-8BE1-405B-80B6-2489D406F73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00FD0CA-8BE1-405B-80B6-2489D406F73C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
