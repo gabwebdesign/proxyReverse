@@ -23,8 +23,11 @@ public partial class UsersDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Users>(entity => entity.ToTable("users", "dbo"));
+        
         OnModelCreatingPartial(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    
+    public DbSet<APIconDB.Entities.Users> Users { get; set; } = default!;
 }
