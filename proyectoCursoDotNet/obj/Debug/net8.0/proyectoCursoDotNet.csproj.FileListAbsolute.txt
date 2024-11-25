@@ -226,3 +226,15 @@
 /Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/Debug/net8.0/proyectoCursoDotNet.genruntimeconfig.cache
 /Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/Debug/net8.0/ref/proyectoCursoDotNet.dll
 /Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/Debug/net8.0/proyectoCursoDotNet.sourcelink.json
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.AspNetCore.Authorization.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.AspNetCore.Metadata.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
