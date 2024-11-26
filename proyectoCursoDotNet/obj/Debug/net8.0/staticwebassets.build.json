@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "QjGv6yTuuqgXUhbBUlNHTF9B8W1vD72Klbyvg2HiA1s=",
+  "Hash": "H/xpA+2ScgdmYJmqufwsuXLQXp2k7U6+3HusOqB+3jc=",
   "Source": "proyectoCursoDotNet",
   "BasePath": "_content/proyectoCursoDotNet",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/APIconDB.csproj",
+      "Version": 2,
+      "Source": "APIconDB",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

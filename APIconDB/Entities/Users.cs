@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace APIconDB.Entities;
 
-[Table("Users")]
+[Table("users")]
 public partial class Users
 {
     [Key]

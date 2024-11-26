@@ -1,6 +1,10 @@
 using System.Security.Claims;
+using APIconDB.Context;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using proyectoCursoDotNet;
 using Microsoft.OpenApi.Models;
+using proyectoCursoDotNet.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(defaultScheme: "Bearer").AddJwtBearer();
 builder.Services.AddControllers();
+
+// Conditionally register UsersDbContext with a single database provider
+var databaseProvider = builder.Configuration.GetValue<string>("DatabaseProvider");
+
+builder.Services.AddDbContext<UsersDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
@@ -55,14 +66,38 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
-app.MapGet("/api/v1/proxy", () => "Hello World!");
-app.MapGet("/login", (ClaimsPrincipal user) =>
+app.MapGet("/login", async (ClaimsPrincipal claims, [FromServices] UsersDbContext context) =>
     {
-        var username = user.Identity?.Name ?? "Anonymous";
-        return string.Format("Bienvenido : {0}", username);
+        try
+        {
+            var claim = claims.Claims.FirstOrDefault(c => c.Type == "Id");
+            if (claim == null)
+            {
+                return Results.BadRequest("User ID claim not found.");
+            }
+
+            if (!int.TryParse(claim.Value, out int userId))
+            {
+                return Results.BadRequest("Invalid User ID claim.");
+            }
+            var user = await context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                return Results.NotFound("User not found.");
+            }
+
+            return Results.Ok(user);
+        }
+        catch (Exception ex)
+        {
+            // Log the exception and return a generic error response
+            var logger = app.Services.GetRequiredService<ILogger<Program>>();
+            logger.LogError(ex, "An error occurred while processing the request.");
+            return Results.Problem("An error occurred while processing your request. Please try again later.");
+        }    
     }
 ).RequireAuthorization();
+app.UseMiddlewareExtensionHandler();
 app.MapControllers();
 
 app.Run();
