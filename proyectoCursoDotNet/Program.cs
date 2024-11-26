@@ -97,6 +97,7 @@ app.MapGet("/login", async (ClaimsPrincipal claims, [FromServices] UsersDbContex
         }    
     }
 ).RequireAuthorization();
+app.MapGet("/maintenance", () => Results.Ok("The system is under maintenance. Please try again later."));
 app.UseMiddlewareExtensionHandler();
 app.MapControllers();
 

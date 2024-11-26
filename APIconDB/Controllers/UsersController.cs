@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIconDB.Context;
 using APIconDB.Entities;
+using APIconDB.Validators;
 
 
 namespace APIconDB.Controllers
@@ -75,10 +77,16 @@ namespace APIconDB.Controllers
         }
 
         // POST: api/Users
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Users>> PostUsers(Users user)
         {
+            var validator = new UsersValidator();
+            var validationResult = await validator.ValidateAsync(user);
+
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
             _context.Users.Add(user);
             try
             {

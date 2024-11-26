@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIconDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f97c9b9f06aaca25d7b3722bd531d49fcb7bcbd3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dd1851f0521740a78d2387637f092eab08be046")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIconDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIconDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JJU8HYDFZiM=",
+  "dgSpecHash": "MNY4ELQk/bo=",
   "success": true,
   "projectFilePath": "/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/proyectoCursoDotNet.csproj",
   "expectedPackageFiles": [
     "/Users/eli/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/eli/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
+    "/Users/eli/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
     "/Users/eli/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/eli/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/eli/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",

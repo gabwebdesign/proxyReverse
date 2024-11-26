@@ -6,11 +6,11 @@ public class CustomExcepcionHandlerMiddleWare(RequestDelegate next)
 {
     public async Task InvokeAsync(HttpContext context)
     {
-        var isInMaintenanceMode = context.RequestServices.GetRequiredService<IConfiguration>().GetValue<bool>("isInMaintenanceMode");
-        
+        var configuration = context.RequestServices.GetRequiredService<IConfiguration>();
+        var isInMaintenanceMode = configuration.GetValue<bool>("MaintenanceMode:IsInMaintenance");
+
         if(isInMaintenanceMode && context.Request.Path != "/maintenance"){
-            context.Response.StatusCode = (int)HttpStatusCode.ServiceUnavailable;
-            await context.Response.WriteAsync("We are in maintenance mode. Please try again later.");
+            context.Response.Redirect("/maintenance");
         }
                     
         try
@@ -25,13 +25,7 @@ public class CustomExcepcionHandlerMiddleWare(RequestDelegate next)
                 case KeyNotFoundException e:
                     context.Response.StatusCode = (int)HttpStatusCode.NotFound;
                     break;
-                case UnauthorizedAccessException e:
-                    context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                    break;
                 case InvalidOperationException e:
-                    context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    break;
-                case InvalidTimeZoneException e:
                     context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                     break;
                 case NotImplementedException e:
