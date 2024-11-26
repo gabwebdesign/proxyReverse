@@ -102,3 +102,8 @@ app.UseMiddlewareExtensionHandler();
 app.MapControllers();
 
 app.Run();
+
+//TODO: 
+// 1. Cacheo de respuestas: Implementar un mecanismo de cacheo para almacenar las respuestas más comunes de la API y mejorar el rendimiento.
+// 2. Un informe que describa la arquitectura del proxy, las decisiones de diseño y los desafíos enfrentados.
+// 3. Diagrama de la arquitectura, mostrando los componentes principales: proxy, servicios externos, base de datos (opcional).
