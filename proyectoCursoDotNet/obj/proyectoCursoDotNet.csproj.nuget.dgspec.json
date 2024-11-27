@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/proyectoCursoDotNet.csproj": {}
+    "/Users/sara.oliver/RiderProjects/proxyReverse/proyectoCursoDotNet/proyectoCursoDotNet.csproj": {}
   },
   "projects": {
-    "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/APIconDB.csproj": {
+    "/Users/sara.oliver/RiderProjects/proxyReverse/APIconDB/APIconDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/APIconDB.csproj",
+        "projectUniqueName": "/Users/sara.oliver/RiderProjects/proxyReverse/APIconDB/APIconDB.csproj",
         "projectName": "APIconDB",
-        "projectPath": "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/APIconDB.csproj",
-        "packagesPath": "/Users/eli/.nuget/packages/",
-        "outputPath": "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/obj/",
+        "projectPath": "/Users/sara.oliver/RiderProjects/proxyReverse/APIconDB/APIconDB.csproj",
+        "packagesPath": "/Users/sara.oliver/.nuget/packages/",
+        "outputPath": "/Users/sara.oliver/RiderProjects/proxyReverse/APIconDB/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eli/.nuget/NuGet/NuGet.Config"
+          "/Users/sara.oliver/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -95,21 +95,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/sara.oliver/.dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/proyectoCursoDotNet.csproj": {
+    "/Users/sara.oliver/RiderProjects/proxyReverse/proyectoCursoDotNet/proyectoCursoDotNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/proyectoCursoDotNet.csproj",
+        "projectUniqueName": "/Users/sara.oliver/RiderProjects/proxyReverse/proyectoCursoDotNet/proyectoCursoDotNet.csproj",
         "projectName": "proyectoCursoDotNet",
-        "projectPath": "/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/proyectoCursoDotNet.csproj",
-        "packagesPath": "/Users/eli/.nuget/packages/",
-        "outputPath": "/Users/eli/RiderProjects/proyectoCursoDotNet/proyectoCursoDotNet/obj/",
+        "projectPath": "/Users/sara.oliver/RiderProjects/proxyReverse/proyectoCursoDotNet/proyectoCursoDotNet.csproj",
+        "packagesPath": "/Users/sara.oliver/.nuget/packages/",
+        "outputPath": "/Users/sara.oliver/RiderProjects/proxyReverse/proyectoCursoDotNet/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eli/.nuget/NuGet/NuGet.Config"
+          "/Users/sara.oliver/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -121,8 +121,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/APIconDB.csproj": {
-                "projectPath": "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/APIconDB.csproj"
+              "/Users/sara.oliver/RiderProjects/proxyReverse/APIconDB/APIconDB.csproj": {
+                "projectPath": "/Users/sara.oliver/RiderProjects/proxyReverse/APIconDB/APIconDB.csproj"
               }
             }
           }
@@ -182,7 +182,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/sara.oliver/.dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

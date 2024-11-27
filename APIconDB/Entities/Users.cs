@@ -12,6 +12,9 @@ public partial class Users
     public string LastName { get; set; } = null!;
     public string Email { get; set; } = null!;
     public string Password { get; set; } = null!;
+    
     public int IsActive { get; set; }
+    
+    public ICollection<Tasks>? Tasks { get; set; }
     
 }

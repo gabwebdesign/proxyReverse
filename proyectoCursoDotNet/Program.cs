@@ -19,6 +19,9 @@ var databaseProvider = builder.Configuration.GetValue<string>("DatabaseProvider"
 builder.Services.AddDbContext<UsersDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDbContext<TasksDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
@@ -104,6 +107,5 @@ app.MapControllers();
 app.Run();
 
 //TODO: 
-// 1. Cacheo de respuestas: Implementar un mecanismo de cacheo para almacenar las respuestas más comunes de la API y mejorar el rendimiento.
-// 2. Un informe que describa la arquitectura del proxy, las decisiones de diseño y los desafíos enfrentados.
-// 3. Diagrama de la arquitectura, mostrando los componentes principales: proxy, servicios externos, base de datos (opcional).
+// 1. Un informe que describa la arquitectura del proxy, las decisiones de diseño y los desafíos enfrentados.
+// 2. Diagrama de la arquitectura, mostrando los componentes principales: proxy, servicios externos, base de datos (opcional).

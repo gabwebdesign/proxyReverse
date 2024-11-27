@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,49 +14,49 @@ using APIconDB.Validators;
 
 namespace APIconDB.Controllers
 {
-    [Route("api/users/[controller]")]
+    [Route("api/tasks/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class TasksController : ControllerBase
     {
-        private readonly UsersDbContext _context;
+        private readonly TasksDbContext _context;
 
-        public UsersController(UsersDbContext context)
+        public TasksController(TasksDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/users/
+        // GET: api/Tasks/
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<Tasks>>> GetTasks()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Tasks.ToListAsync();
         }
 
-        // GET: api/users/5
+        // GET: api/Tasks/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Users>> GetUser(int id)
+        public async Task<ActionResult<Tasks>> GetTask(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var task = await _context.Tasks.FindAsync(id);
 
-            //if (Users == null)
+            //if (Tasks == null)
             //{
             //    return NotFound();
            // }
 
-            return user;
+            return task;
         }
 
-        // PUT: api/Users/5
+        // PUT: api/Tasks/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUsers(int id, Users user)
+        public async Task<IActionResult> PutTasks(int id, Tasks task)
         {
-            if (id != user.Id)
+            if (id != task.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(user).State = EntityState.Modified;
+            _context.Entry(task).State = EntityState.Modified;
 
             try
             {
@@ -63,7 +64,7 @@ namespace APIconDB.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UsersExists(id))
+                if (!TasksExists(id))
                 {
                     return NotFound();
                 }
@@ -76,25 +77,32 @@ namespace APIconDB.Controllers
             return NoContent();
         }
 
-        // POST: api/Users
+        // POST: api/Tasks
         [HttpPost]
-        public async Task<ActionResult<Users>> PostUsers(Users user)
+        public async Task<ActionResult<Tasks>> PostTasks(Tasks task)
         {
-            var validator = new UsersValidator();
-            var validationResult = await validator.ValidateAsync(user);
+            var validator = new TasksValidator();
+            var validationResult = await validator.ValidateAsync(task);
+            var claimType = ClaimsPrincipal.Current?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (claimType != null)
+            {
+                var userId = User.FindFirstValue(claimType);
+                // Asignar el ID del usuario a la tarea
+                if (userId != null) task.UserId = int.Parse(userId);
+            }
 
             if (!validationResult.IsValid)
             {
                 return BadRequest(validationResult.Errors);
             }
-            _context.Users.Add(user);
+            _context.Tasks.Add(task);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (UsersExists(user.Id))
+                if (TasksExists(task.Id))
                 {
                     return Conflict();
                 }
@@ -104,28 +112,28 @@ namespace APIconDB.Controllers
                 }
             }
 
-            return CreatedAtAction("GetUsers", new { id = user.Id }, user);
+            return CreatedAtAction("GetTasks", new { id = task.Id }, task);
         }
 
-        // DELETE: api/Users/5
+        // DELETE: api/Tasks/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUsers(int id)
+        public async Task<IActionResult> DeleteTasks(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
+            var task = await _context.Tasks.FindAsync(id);
+            if (task == null)
             {
                 return NotFound();
             }
 
-            _context.Users.Remove(user);
+            _context.Tasks.Remove(task);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool UsersExists(int id)
+        private bool TasksExists(int id)
         {
-            return _context.Users.Any(e => e.Id == id);
+            return _context.Tasks.Any(e => e.Id == id);
         }
     }
 }
