@@ -1,3 +1,4 @@
+using System.Data.Common;
 using System.Security.Claims;
 using APIconDB.Context;
 using Microsoft.AspNetCore.Mvc;
@@ -16,11 +17,11 @@ builder.Services.AddControllers();
 // Conditionally register UsersDbContext with a single database provider
 var databaseProvider = builder.Configuration.GetValue<string>("DatabaseProvider");
 
-builder.Services.AddDbContext<UsersDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddDbContext<TasksDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<UsersDbContext>(
+    options => options.UseSqlite("Data Source=../APIconDB/Identifier.sqlite"));
+    
+builder.Services.AddDbContext<TasksDbContext>((
+    options => options.UseSqlite("Data Source=../APIconDB/Identifier.sqlite")));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

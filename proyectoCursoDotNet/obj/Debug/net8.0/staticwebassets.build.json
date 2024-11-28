@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "H/xpA+2ScgdmYJmqufwsuXLQXp2k7U6+3HusOqB+3jc=",
+  "Hash": "YNMNmR2qOCtZVp163ezaGB/i5yb6pvqHGBS0LcBtAsY=",
   "Source": "proyectoCursoDotNet",
   "BasePath": "_content/proyectoCursoDotNet",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "/Users/eli/RiderProjects/proyectoCursoDotNet/APIconDB/APIconDB.csproj",
+      "Identity": "/Users/sara.oliver/RiderProjects/proxyReverse/APIconDB/APIconDB.csproj",
       "Version": 2,
       "Source": "APIconDB",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
