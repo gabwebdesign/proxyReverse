@@ -53,9 +53,7 @@ builder.Services.AddSwaggerGen(opt =>
         }
     });
 });
-builder.Services.AddHttpClient<IProxyService, ProxyService>("ChuckNorrisAPI", client => 
-    client.BaseAddress = new Uri("https://api.hacienda.go.cr/"));
-builder.Services.AddScoped<IProxyService, ProxyService>();
+
 var app = builder.Build();
 
 app.UseAuthentication();
