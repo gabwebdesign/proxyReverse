@@ -28,14 +28,18 @@ namespace APIconDB.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users
+                .Include(u=> u.Tasks)
+                .ToListAsync();
         }
 
         // GET: api/users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Users>> GetUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users
+                .Include(u => u.Tasks)
+                .FirstAsync( u => u.Id == id );
 
             //if (Users == null)
             //{

@@ -15,6 +15,7 @@ public partial class Users
     
     public int IsActive { get; set; }
     
+    [ForeignKey("UserId")]
     public ICollection<Tasks>? Tasks { get; set; }
     
 }
