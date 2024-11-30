@@ -14,7 +14,7 @@ API-Tareas es un proyecto de API en .NET Core que gestiona usuarios y tareas. De
 - [Contribuir](#contribuir)
 - [Contacto](#contacto)
 
-- ![Diagrama de flujo](https://www.figma.com/board/qNwzGacpnyHgVFlRH0Z7dI/flow-app-task?node-id=0-1&t=osDcnbmpx7yVK6c9-1)
+![Diagrama de flujo](https://www.figma.com/board/qNwzGacpnyHgVFlRH0Z7dI/flow-app-task?node-id=0-1&t=osDcnbmpx7yVK6c9-1)
  
 ## Instalación
 
