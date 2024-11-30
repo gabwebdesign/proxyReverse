@@ -4,6 +4,7 @@
 
 API-Tareas es un proyecto de API en .NET Core que gestiona usuarios y tareas. Demuestra cómo configurar una relación uno a muchos entre usuarios y tareas utilizando Entity Framework Core y SQLite.
 
+
 ## Tabla de Contenidos
 
 - [Instalación](#instalación)
@@ -12,6 +13,8 @@ API-Tareas es un proyecto de API en .NET Core que gestiona usuarios y tareas. De
 - [Consideraciones](#consideraciones)
 - [Contribuir](#contribuir)
 - [Contacto](#contacto)
+
+- ![Diagrama de flujo](https://www.figma.com/board/qNwzGacpnyHgVFlRH0Z7dI/flow-app-task?node-id=0-1&t=osDcnbmpx7yVK6c9-1)
  
 ## Instalación
 
