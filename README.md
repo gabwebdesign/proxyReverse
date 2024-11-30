@@ -50,7 +50,7 @@ API-Tareas es un proyecto de API en .NET Core que gestiona usuarios y tareas. De
 - **Actualizar un usuario**: `PUT /api/users/{id}`
 - **Eliminar un usuario**: `DELETE /api/users/{id}`
 
-- - **Obtener todos las tareas**: `GET /api/tasks`
+- **Obtener todos las tareas**: `GET /api/tasks`
 - **Obtener un usuario por ID**: `GET /api/tasks/{id}`
 - **Crear un nuevo usuario**: `POST /api/tasks`
 - **Actualizar un usuario**: `PUT /api/tasks/{id}`
