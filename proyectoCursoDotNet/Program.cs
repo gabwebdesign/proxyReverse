@@ -104,7 +104,3 @@ app.UseMiddlewareExtensionHandler();
 app.MapControllers();
 
 app.Run();
-
-//TODO: 
-// 1. Un informe que describa la arquitectura del proxy, las decisiones de diseño y los desafíos enfrentados.
-// 2. Diagrama de la arquitectura, mostrando los componentes principales: proxy, servicios externos, base de datos (opcional).
